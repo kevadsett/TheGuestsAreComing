@@ -12,15 +12,20 @@ public class InputManager : MonoBehaviour {
 			if (hit.transform != null) {
 				GameObject hitGO = hit.transform.gameObject;
 				StateManager stateManager = hitGO.GetComponent<StateManager> ();
-				if (hitGO.layer == 8) {
+				switch (hitGO.layer) {
+				case 8: // moveable objects
 					stateManager.SetState ("active");
-				}
-				if (hitGO.layer == 9) {
+					break;
+				case 9: // moveable object targets
 					ConnectedItemComponent connectedItemComponent = hitGO.GetComponent<ConnectedItemComponent> ();
 					if (connectedItemComponent.ConnectedIsActivated) {
 						stateManager.SetState ("complete");
 						connectedItemComponent.ConnectedTo.GetComponent<StateManager> ().SetState ("complete");
 					}
+					break;
+				case 10: // single-click objects
+					stateManager.SetState ("complete");
+					break;
 				}
 				EventManager.RevertStates (hitGO);
 			} else {
