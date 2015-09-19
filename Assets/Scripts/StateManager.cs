@@ -34,6 +34,9 @@ public class StateManager : MonoBehaviour {
 	}
 
 	public void SetState(string state) {
+		if (spriteRenderer == null) {
+			return;
+		}
 		switch (state) {
 		case "base":
 			if (!isComplete) {
