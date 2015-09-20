@@ -9,6 +9,7 @@ public class RoomManager : MonoBehaviour {
 
 	void OnEnable() {
 		EventManager.OnItemTidied += OnItemTidied;
+		ProgressTracker.AddRoom (Name, NumberOfItems);
 	}
 
 	void OnDisable() {
@@ -18,8 +19,10 @@ public class RoomManager : MonoBehaviour {
 	void OnItemTidied () {
 		if (++numberOfTidiedItems == NumberOfItems) {
 			LayerDisplayManager.Show ("RoomThumbnails");
-			EventManager.RoomComplete (Name);
+			EventManager.RoomAction (Name, EventManager.RoomEventType.roomComplete, numberOfTidiedItems, NumberOfItems);
 			Destroy (gameObject);
+		} else {
+			EventManager.RoomAction (Name, EventManager.RoomEventType.itemTidied, numberOfTidiedItems, NumberOfItems);
 		}
 	}
 }

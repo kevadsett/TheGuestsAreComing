@@ -2,17 +2,18 @@
 using System.Collections;
 
 public class EventManager : MonoBehaviour {
-	public delegate void RevertAction(GameObject exception);
-	public static event RevertAction OnRevertStates;
+	public delegate void RevertEvent(GameObject exception);
+	public static event RevertEvent OnRevertStates;
 
-	public delegate void SecondTickAction(int currentSecond);
-	public static event SecondTickAction OnSecondTick;
+	public delegate void SecondTickEvent(int currentSecond);
+	public static event SecondTickEvent OnSecondTick;
 
-	public delegate void ItemTidiedAction();
-	public static event ItemTidiedAction OnItemTidied;
+	public delegate void ItemTidiedEvent();
+	public static event ItemTidiedEvent OnItemTidied;
 
-	public delegate void RoomCompleteAction(string roomName);
-	public static event RoomCompleteAction OnRoomComplete;
+	public enum RoomEventType { itemTidied, roomComplete };
+	public delegate void RoomEvent(string roomName, RoomEventType type, int itemCount, int totalItemCount);
+	public static event RoomEvent OnRoomAction;
 
 	public static void RevertStates(GameObject exception = null) {
 		if (OnRevertStates != null) {
@@ -32,9 +33,9 @@ public class EventManager : MonoBehaviour {
 		}
 	}
 
-	public static void RoomComplete(string roomName) {
-		if (OnRoomComplete != null) {
-			OnRoomComplete (roomName);
+	public static void RoomAction(string roomName, RoomEventType type, int itemCount, int totalItemCount) {
+		if (OnRoomAction != null) {
+			OnRoomAction (roomName, type, itemCount, totalItemCount);
 		}
 	}
 }

@@ -14,7 +14,6 @@ public class InputManager : MonoBehaviour {
 			if (hit.transform != null) {
 				GameObject hitGO = hit.transform.gameObject;
 				StateManager stateManager = hitGO.GetComponent<StateManager> ();
-				Debug.Log (hitGO);
 				switch (hitGO.layer) {
 				case 8: // moveable item
 					stateManager.SetState ("active");
