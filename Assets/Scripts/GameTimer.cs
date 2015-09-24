@@ -4,6 +4,7 @@ using System.Collections;
 public class GameTimer : MonoBehaviour {
 	float timer = 0.0f;
 	int currentSeconds = 0;
+	bool emittedTimeUp = false;
 
 	void Update () {
 		timer += Time.deltaTime;
@@ -12,6 +13,8 @@ public class GameTimer : MonoBehaviour {
 				currentSeconds = (int)timer;
 				EventManager.SecondTick (currentSeconds);
 			}
+		} else if (!emittedTimeUp) {
+			EventManager.TimeUp ();
 		}
 	}
 }

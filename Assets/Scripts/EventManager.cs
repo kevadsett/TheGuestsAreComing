@@ -15,6 +15,9 @@ public class EventManager : MonoBehaviour {
 	public delegate void RoomEvent(string roomName, RoomEventType type, int itemCount, int totalItemCount);
 	public static event RoomEvent OnRoomAction;
 
+	public delegate void TimeUpEvent();
+	public static event TimeUpEvent OnTimeUp;
+
 	public static void RevertStates(GameObject exception = null) {
 		if (OnRevertStates != null) {
 			OnRevertStates (exception);
@@ -36,6 +39,12 @@ public class EventManager : MonoBehaviour {
 	public static void RoomAction(string roomName, RoomEventType type, int itemCount, int totalItemCount) {
 		if (OnRoomAction != null) {
 			OnRoomAction (roomName, type, itemCount, totalItemCount);
+		}
+	}
+
+	public static void TimeUp() {
+		if (OnTimeUp != null) {
+			OnTimeUp ();
 		}
 	}
 }

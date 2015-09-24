@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class ProgressTracker : MonoBehaviour {
 
@@ -12,16 +14,7 @@ public class ProgressTracker : MonoBehaviour {
 
 	private static bool created = false;
 
-	private struct roomProgressItem {
-		public int completeItemCount, totalItems;
-
-		public roomProgressItem(int itemCount, int total) {
-			completeItemCount = itemCount;
-			totalItems = total;
-		}
-	}
-
-	static Dictionary <string, roomProgressItem> roomProgress = new Dictionary<string, roomProgressItem>();
+	static Dictionary <string, RoomProgress> roomProgress = new Dictionary<string, RoomProgress>();
 
 
 	void Awake() {
@@ -35,21 +28,23 @@ public class ProgressTracker : MonoBehaviour {
 
 	void OnEnable() {
 		EventManager.OnRoomAction += OnRoomAction;
+		EventManager.OnTimeUp += OnTimeUp;
 	}
 
 	void OnDisable() {
 		EventManager.OnRoomAction -= OnRoomAction;
+		EventManager.OnTimeUp -= OnTimeUp;
 	}
 
 	void OnRoomAction (string roomName, EventManager.RoomEventType type, int itemCount, int totalItemCount) {
-		roomProgressItem progress;
+		RoomProgress progress;
 		roomProgress.TryGetValue (roomName, out progress);
 		switch (type) {
 		case EventManager.RoomEventType.itemTidied:
-			progress.completeItemCount++;
+			progress.CompleteItemCount++;
 			break;
 		case EventManager.RoomEventType.roomComplete:
-			progress.completeItemCount = totalItemCount;
+			progress.CompleteItemCount = totalItemCount;
 			Vector3 thumbnailPosition =  Thumbnails.transform.Find (roomName).transform.position;
 			Instantiate (RoomTick, thumbnailPosition, new Quaternion ());
 			if (++completeRoomCount == roomCount) {
@@ -62,13 +57,30 @@ public class ProgressTracker : MonoBehaviour {
 
 	void OnLevelWasLoaded (int sceneIndex) {
 		if (sceneIndex == 3) { // results scene was loaded
-			foreach (KeyValuePair <string, roomProgressItem> progressItem in roomProgress) {
-				Debug.Log(string.Format ("{0}: {1} of {2}", progressItem.Key, progressItem.Value.completeItemCount, progressItem.Value.totalItems));
+			foreach (KeyValuePair <string, RoomProgress> progressItem in roomProgress) {
+				Debug.Log(string.Format ("{0}: {1} of {2}", progressItem.Key, progressItem.Value.CompleteItemCount, progressItem.Value.TotalItems));
 			}
 		}
 	}
 
-	public static void AddRoom (string roomName, int totalItemCount) {
-		roomProgress.Add (roomName, new roomProgressItem (0, totalItemCount));
+	public static void AddRoom (string roomName, List<string>itemNames) {
+		Debug.Log ("Add " + roomName);
+		roomProgress.Add (roomName, new RoomProgress (roomName, itemNames));
+	}
+
+	public static RoomProgress GetRoomProgress(string roomName) {
+		Debug.Log ("Get progress for " + roomName);
+		return roomProgress [roomName];
+	}
+
+	public static void SetItemComplete(string roomName, string itemName) {
+		RoomProgress roomProg = GetRoomProgress (roomName);
+		ItemProgress itemProg = roomProg.Items.Find (i => i.Name == itemName);
+		itemProg.IsComplete = true;
+		Debug.Log (itemProg.Name + " was set to complete");
+	}
+
+	void OnTimeUp() {
+		Application.LoadLevel ("Results");
 	}
 }

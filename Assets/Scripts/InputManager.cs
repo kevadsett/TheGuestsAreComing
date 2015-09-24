@@ -21,12 +21,16 @@ public class InputManager : MonoBehaviour {
 				case 9: // moveable item targets
 					ConnectedItemComponent connectedItemComponent = hitGO.GetComponent<ConnectedItemComponent> ();
 					if (connectedItemComponent.ConnectedIsActivated) {
+						string connectedComponentName = connectedItemComponent.ConnectedTo.name;
+						ProgressTracker.SetItemComplete (RoomManager.CurrentRoom, connectedComponentName);
 						stateManager.SetState ("complete");
 						connectedItemComponent.ConnectedTo.GetComponent<StateManager> ().SetState ("complete");
 						EventManager.ItemTidied ();
 					}
 					break;
 				case 10: // single-click items
+					ProgressTracker.SetItemComplete (RoomManager.CurrentRoom, hitGO.name);
+					// TODO: Only complete if not holding a multi-click item
 					stateManager.SetState ("complete");
 					EventManager.ItemTidied ();
 					break;

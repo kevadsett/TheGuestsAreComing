@@ -1,15 +1,43 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public class RoomManager : MonoBehaviour {
-
-	public int NumberOfItems;
+	
 	public string Name;
+	public List<string> Items;
 	int numberOfTidiedItems = 0;
+
+	public static string CurrentRoom;
+
+	static List<string> ExistingNames = new List<string>();
+
+	void Awake() {
+		
+	}
 
 	void OnEnable() {
 		EventManager.OnItemTidied += OnItemTidied;
-		ProgressTracker.AddRoom (Name, NumberOfItems);
+		if (!ExistingNames.Contains (Name)) {
+			ProgressTracker.AddRoom (Name, Items);
+			ExistingNames.Add (Name);
+			CurrentRoom = Name;
+		} else {
+			RoomProgress progress = ProgressTracker.GetRoomProgress (Name);
+			foreach (ItemProgress item in progress.Items) {
+				if (item.IsComplete) {
+					Transform child = transform.Find (item.Name);
+					StateManager stateManager = child.GetComponent<StateManager> ();
+					stateManager.SetState ("complete");
+					ConnectedItemComponent connectedItemComponent = child.GetComponent<ConnectedItemComponent> ();
+					if (connectedItemComponent != null && connectedItemComponent.ConnectedTo != null) {
+						connectedItemComponent.ConnectedTo.GetComponent<StateManager> ().SetState ("complete");
+					}
+				}
+				Debug.Log (item.Name + ": " + item.IsComplete);
+			}
+		}
 	}
 
 	void OnDisable() {
@@ -17,12 +45,12 @@ public class RoomManager : MonoBehaviour {
 	}
 
 	void OnItemTidied () {
-		if (++numberOfTidiedItems == NumberOfItems) {
+		if (++numberOfTidiedItems == Items.Count) {
 			LayerDisplayManager.Show ("RoomThumbnails");
-			EventManager.RoomAction (Name, EventManager.RoomEventType.roomComplete, numberOfTidiedItems, NumberOfItems);
+			EventManager.RoomAction (Name, EventManager.RoomEventType.roomComplete, numberOfTidiedItems, Items.Count);
 			Destroy (gameObject);
 		} else {
-			EventManager.RoomAction (Name, EventManager.RoomEventType.itemTidied, numberOfTidiedItems, NumberOfItems);
+			EventManager.RoomAction (Name, EventManager.RoomEventType.itemTidied, numberOfTidiedItems, Items.Count);
 		}
 	}
 }
