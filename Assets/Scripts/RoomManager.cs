@@ -9,7 +9,8 @@ public class RoomManager : MonoBehaviour {
 	public List<string> Items;
 	int numberOfTidiedItems = 0;
 
-	public static string CurrentRoom;
+	public static GameObject CurrentRoom;
+	public static string CurrentRoomName;
 
 	static List<string> ExistingNames = new List<string>();
 
@@ -22,11 +23,11 @@ public class RoomManager : MonoBehaviour {
 		if (!ExistingNames.Contains (Name)) {
 			ProgressTracker.AddRoom (Name, Items);
 			ExistingNames.Add (Name);
-			CurrentRoom = Name;
 		} else {
 			RoomProgress progress = ProgressTracker.GetRoomProgress (Name);
 			foreach (ItemProgress item in progress.Items) {
 				if (item.IsComplete) {
+					numberOfTidiedItems++;
 					Transform child = transform.Find (item.Name);
 					StateManager stateManager = child.GetComponent<StateManager> ();
 					stateManager.SetState ("complete");
@@ -38,6 +39,8 @@ public class RoomManager : MonoBehaviour {
 				Debug.Log (item.Name + ": " + item.IsComplete);
 			}
 		}
+		CurrentRoom = transform.gameObject;
+		CurrentRoomName = Name;
 	}
 
 	void OnDisable() {

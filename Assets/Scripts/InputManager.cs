@@ -22,14 +22,14 @@ public class InputManager : MonoBehaviour {
 					ConnectedItemComponent connectedItemComponent = hitGO.GetComponent<ConnectedItemComponent> ();
 					if (connectedItemComponent.ConnectedIsActivated) {
 						string connectedComponentName = connectedItemComponent.ConnectedTo.name;
-						ProgressTracker.SetItemComplete (RoomManager.CurrentRoom, connectedComponentName);
+						ProgressTracker.SetItemComplete (RoomManager.CurrentRoomName, connectedComponentName);
 						stateManager.SetState ("complete");
 						connectedItemComponent.ConnectedTo.GetComponent<StateManager> ().SetState ("complete");
 						EventManager.ItemTidied ();
 					}
 					break;
 				case 10: // single-click items
-					ProgressTracker.SetItemComplete (RoomManager.CurrentRoom, hitGO.name);
+					ProgressTracker.SetItemComplete (RoomManager.CurrentRoomName, hitGO.name);
 					// TODO: Only complete if not holding a multi-click item
 					stateManager.SetState ("complete");
 					EventManager.ItemTidied ();
