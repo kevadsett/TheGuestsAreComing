@@ -11,11 +11,16 @@ public class RoomManager : MonoBehaviour {
 
 	public static GameObject CurrentRoom;
 	public static string CurrentRoomName;
+	public static float CurrentRoomAge;
 
 	static List<string> ExistingNames = new List<string>();
 
 	void Awake() {
 		
+	}
+
+	void Update() {
+		CurrentRoomAge += Time.deltaTime;
 	}
 
 	void OnEnable() {
@@ -36,7 +41,6 @@ public class RoomManager : MonoBehaviour {
 						connectedItemComponent.ConnectedTo.GetComponent<StateManager> ().SetState ("complete");
 					}
 				}
-				Debug.Log (item.Name + ": " + item.IsComplete);
 			}
 		}
 		CurrentRoom = transform.gameObject;
@@ -49,9 +53,7 @@ public class RoomManager : MonoBehaviour {
 
 	void OnItemTidied () {
 		if (++numberOfTidiedItems == Items.Count) {
-			LayerDisplayManager.Show ("RoomThumbnails");
 			EventManager.RoomAction (Name, EventManager.RoomEventType.roomComplete, numberOfTidiedItems, Items.Count);
-			Destroy (gameObject);
 		} else {
 			EventManager.RoomAction (Name, EventManager.RoomEventType.itemTidied, numberOfTidiedItems, Items.Count);
 		}

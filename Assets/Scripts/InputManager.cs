@@ -11,7 +11,7 @@ public class InputManager : MonoBehaviour {
 			Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			RaycastHit2D hit = Physics2D.Raycast (new Vector2 (mouseWorldPosition.x, mouseWorldPosition.y), Vector2.zero, 0f, layers);
 
-			if (hit.transform != null) {
+			if (hit.transform != null && RoomManager.CurrentRoomAge > 0.5f) {
 				GameObject hitGO = hit.transform.gameObject;
 				StateManager stateManager = hitGO.GetComponent<StateManager> ();
 				switch (hitGO.layer) {

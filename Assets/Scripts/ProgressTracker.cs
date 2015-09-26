@@ -55,21 +55,11 @@ public class ProgressTracker : MonoBehaviour {
 		roomProgress [roomName] = progress;
 	}
 
-	void OnLevelWasLoaded (int sceneIndex) {
-		if (sceneIndex == 3) { // results scene was loaded
-			foreach (KeyValuePair <string, RoomProgress> progressItem in roomProgress) {
-				Debug.Log(string.Format ("{0}: {1} of {2}", progressItem.Key, progressItem.Value.CompleteItemCount, progressItem.Value.TotalItems));
-			}
-		}
-	}
-
 	public static void AddRoom (string roomName, List<string>itemNames) {
-		Debug.Log ("Add " + roomName);
 		roomProgress.Add (roomName, new RoomProgress (roomName, itemNames));
 	}
 
 	public static RoomProgress GetRoomProgress(string roomName) {
-		Debug.Log ("Get progress for " + roomName);
 		return roomProgress [roomName];
 	}
 
@@ -77,7 +67,6 @@ public class ProgressTracker : MonoBehaviour {
 		RoomProgress roomProg = GetRoomProgress (roomName);
 		ItemProgress itemProg = roomProg.Items.Find (i => i.Name == itemName);
 		itemProg.IsComplete = true;
-		Debug.Log (itemProg.Name + " was set to complete");
 	}
 
 	void OnTimeUp() {

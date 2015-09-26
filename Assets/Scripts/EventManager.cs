@@ -18,6 +18,9 @@ public class EventManager : MonoBehaviour {
 	public delegate void TimeUpEvent();
 	public static event TimeUpEvent OnTimeUp;
 
+	public delegate void BackButtonDisplayEvent(bool show);
+	public static event BackButtonDisplayEvent OnDisplayBackButton;
+
 	public static void RevertStates(GameObject exception = null) {
 		if (OnRevertStates != null) {
 			OnRevertStates (exception);
@@ -45,6 +48,12 @@ public class EventManager : MonoBehaviour {
 	public static void TimeUp() {
 		if (OnTimeUp != null) {
 			OnTimeUp ();
+		}
+	}
+
+	public static void DisplayBackButton(bool show) {
+		if (OnDisplayBackButton != null) {
+			OnDisplayBackButton (show);
 		}
 	}
 }
