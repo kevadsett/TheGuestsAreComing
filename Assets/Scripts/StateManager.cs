@@ -38,6 +38,9 @@ public class StateManager : MonoBehaviour {
 			spriteRenderer = GetComponent <SpriteRenderer>();
 		}
 
+		OutlineEffect outline = Camera.main.GetComponent<OutlineEffect> ();
+		Renderer renderer = gameObject.GetComponent<Renderer> ();
+		outline.outlineRenderers.Clear ();
 		switch (state) {
 		case "base":
 			if (!isComplete) {
@@ -47,11 +50,8 @@ public class StateManager : MonoBehaviour {
 			break;
 		case "active":
 			if (!isComplete) {
-				OutlineEffect outline = Camera.main.GetComponent<OutlineEffect> ();
-				outline.outlineRenderers.Clear ();
 				IsActive = true;
 				spriteRenderer.sprite = ActiveState;
-				Renderer renderer = gameObject.GetComponent<Renderer> ();
 				outline.outlineRenderers.Add (renderer);
 			}
 			break;

@@ -29,7 +29,6 @@ public class RoomManager : MonoBehaviour {
 			ProgressTracker.AddRoom (Name, Items);
 			ExistingNames.Add (Name);
 		} else {
-			// TODO: Rooms marked as complete when not complete
 			RoomProgress progress = ProgressTracker.GetRoomProgress (Name);
 			foreach (ItemProgress item in progress.Items) {
 				if (item.IsComplete) {

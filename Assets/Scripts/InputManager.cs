@@ -14,13 +14,15 @@ public class InputManager : MonoBehaviour {
 			if (hit.transform != null && RoomManager.CurrentRoomAge > 0.5f) {
 				GameObject hitGO = hit.transform.gameObject;
 				StateManager stateManager = hitGO.GetComponent<StateManager> ();
+				ConnectedItemComponent connectedItemComponent = hitGO.GetComponent<ConnectedItemComponent> ();
+				bool connectedIsActive = connectedItemComponent && connectedItemComponent.ConnectedIsActivated;
+				EventManager.RevertStates ();
 				switch (hitGO.layer) {
 				case 8: // moveable item
 					stateManager.SetState ("active");
 					break;
 				case 9: // moveable item targets
-					ConnectedItemComponent connectedItemComponent = hitGO.GetComponent<ConnectedItemComponent> ();
-					if (connectedItemComponent.ConnectedIsActivated) {
+					if (connectedIsActive) {
 						string connectedComponentName = connectedItemComponent.ConnectedTo.name;
 						ProgressTracker.SetItemComplete (RoomManager.CurrentRoomName, connectedComponentName);
 						stateManager.SetState ("complete");
@@ -35,7 +37,6 @@ public class InputManager : MonoBehaviour {
 					EventManager.ItemTidied ();
 					break;
 				}
-				EventManager.RevertStates (hitGO);
 			} else {
 				EventManager.RevertStates ();
 			}

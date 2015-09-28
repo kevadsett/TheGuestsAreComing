@@ -197,7 +197,9 @@ public class OutlineEffect : MonoBehaviour
 
 		outlineShaderMaterial.SetTexture("_OutlineSource", renderTexture);
 		Graphics.Blit(source, destination, outlineShaderMaterial);
-		RenderTexture.ReleaseTemporary(renderTexture);
+		if (renderTexture != null) {
+			renderTexture.Release ();
+		}
 	}
 
 	private void CreateMaterialsIfNeeded()
