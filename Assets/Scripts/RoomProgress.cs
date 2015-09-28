@@ -9,11 +9,12 @@ public class RoomProgress
 	public string Name;
 	public List<ItemProgress> Items;
 
-	public RoomProgress (string name, List<string> itemNames) {
+	public RoomProgress (string name, List<GameObject> items) {
 		Name = name;
 		CompleteItemCount = 0;
 		Items = new List<ItemProgress>();
-		foreach (string itemName in itemNames) {
+		foreach (GameObject item in items) {
+			string itemName = item.name;
 			Items.Add(new ItemProgress(itemName));
 		}
 	}

@@ -6,7 +6,7 @@ using System.Linq;
 public class RoomManager : MonoBehaviour {
 	
 	public string Name;
-	public List<string> Items;
+	public List<GameObject> Items;
 	int numberOfTidiedItems = 0;
 
 	public static GameObject CurrentRoom;
@@ -29,6 +29,7 @@ public class RoomManager : MonoBehaviour {
 			ProgressTracker.AddRoom (Name, Items);
 			ExistingNames.Add (Name);
 		} else {
+			// TODO: Rooms marked as complete when not complete
 			RoomProgress progress = ProgressTracker.GetRoomProgress (Name);
 			foreach (ItemProgress item in progress.Items) {
 				if (item.IsComplete) {
@@ -43,6 +44,7 @@ public class RoomManager : MonoBehaviour {
 				}
 			}
 		}
+
 		CurrentRoom = transform.gameObject;
 		CurrentRoomName = Name;
 	}

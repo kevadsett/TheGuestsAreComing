@@ -55,8 +55,8 @@ public class ProgressTracker : MonoBehaviour {
 		roomProgress [roomName] = progress;
 	}
 
-	public static void AddRoom (string roomName, List<string>itemNames) {
-		roomProgress.Add (roomName, new RoomProgress (roomName, itemNames));
+	public static void AddRoom (string roomName, List<GameObject>items) {
+		roomProgress.Add (roomName, new RoomProgress (roomName, items));
 	}
 
 	public static RoomProgress GetRoomProgress(string roomName) {
