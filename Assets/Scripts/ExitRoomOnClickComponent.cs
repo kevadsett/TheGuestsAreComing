@@ -8,6 +8,7 @@ public class ExitRoomOnClickComponent : MonoBehaviour {
 		Destroy (RoomManager.CurrentRoom);
 		RoomManager.CurrentRoom = null;
 		RoomManager.CurrentRoomName = null;
+		RoomManager.CurrentRoomAge = 0.0f;
 		EventManager.DisplayBackButton (false);
 	}
 }
