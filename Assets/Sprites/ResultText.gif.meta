@@ -1,0 +1,352 @@
+fileFormatVersion: 2
+guid: cfe28a8cb355c4c04b9f7a1e004c711b
+timeCreated: 1443558184
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BathroomBad0
+    21300002: LivingRoomBad0
+    21300004: KitchenBad0
+    21300006: BathroomBad1
+    21300008: LivingRoomBad1
+    21300010: KitchenBad1
+    21300012: BathroomBad2
+    21300014: LivingRoomBad2
+    21300016: KitchenBad2
+    21300018: BathroomMed0
+    21300020: LivingRoomMed0
+    21300022: KitchenMed0
+    21300024: BathroomMed1
+    21300026: LivingRoomMed1
+    21300028: KitchenMed1
+    21300030: BathroomMed2
+    21300032: LivingRoomMed2
+    21300034: KitchenMed2
+    21300036: BathroomGood0
+    21300038: LivingRoomGood0
+    21300040: KitchenGood0
+    21300042: BathroomGood1
+    21300044: LivingRoomGood1
+    21300046: KitchenGood1
+    21300048: BathroomGood2
+    21300050: LivingRoomGood2
+    21300052: KitchenGood2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: BathroomBad0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1846
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LivingRoomBad0
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 1842
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KitchenBad0
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 1842
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BathroomBad1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1728
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LivingRoomBad1
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 1726
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KitchenBad1
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 1724
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BathroomBad2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1610
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LivingRoomBad2
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 1610
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KitchenBad2
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 1608
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BathroomMed0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1436
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LivingRoomMed0
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1438
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KitchenMed0
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 1440
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BathroomMed1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1312
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LivingRoomMed1
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1314
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KitchenMed1
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 1318
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BathroomMed2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1196
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LivingRoomMed2
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1198
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KitchenMed2
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 1198
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BathroomGood0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1028
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LivingRoomGood0
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1026
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KitchenGood0
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 1026
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BathroomGood1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 912
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LivingRoomGood1
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 914
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KitchenGood1
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 912
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BathroomGood2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 792
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LivingRoomGood2
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 794
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KitchenGood2
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 796
+        width: 640
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

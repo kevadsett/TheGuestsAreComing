@@ -63,10 +63,15 @@ public class ProgressTracker : MonoBehaviour {
 		return roomProgress [roomName];
 	}
 
-	public static void SetItemComplete(string roomName, string itemName) {
+	public static bool SetItemComplete(string roomName, string itemName) {
 		RoomProgress roomProg = GetRoomProgress (roomName);
 		ItemProgress itemProg = roomProg.Items.Find (i => i.Name == itemName);
-		itemProg.IsComplete = true;
+		if (itemProg.IsComplete) {
+			return false;
+		} else {
+			itemProg.IsComplete = true;
+			return true;
+		}
 	}
 
 	void OnTimeUp() {
