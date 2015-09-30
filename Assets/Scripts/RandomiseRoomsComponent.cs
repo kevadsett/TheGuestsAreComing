@@ -12,6 +12,8 @@ public class RandomiseRoomsComponent : MonoBehaviour {
 			Vector2 chosenPosition = Positions [Random.Range (0, Positions.Count)];
 			Positions.Remove (chosenPosition);
 			GameObject thumbnail = (GameObject)Instantiate(Thumbnails [i], new Vector3 (chosenPosition.x, chosenPosition.y, 0.0f), new Quaternion());
+			thumbnail.name = Thumbnails [i].name;
+			thumbnail.layer = 11;
 			thumbnail.transform.SetParent (gameObject.transform);
 		}
 	}
