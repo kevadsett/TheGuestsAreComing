@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: cfe28a8cb355c4c04b9f7a1e004c711b
-timeCreated: 1443643286
+timeCreated: 1443643920
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -16,22 +16,22 @@ TextureImporter:
     21300018: BathroomMed0
     21300020: LivingRoomMed0
     21300022: KitchenMed0
-    21300024: BathroomMed1
+    21300024: BathroomMed0
     21300026: LivingRoomMed1
     21300028: KitchenMed1
-    21300030: BathroomMed2
+    21300030: BathroomMed1
     21300032: LivingRoomMed2
     21300034: KitchenMed2
     21300036: BathroomGood0
     21300038: LivingRoomGood0
     21300040: KitchenGood0
-    21300042: BathroomGood1
+    21300042: BathroomGood0
     21300044: LivingRoomGood1
-    21300046: KitchenGood1
-    21300048: BathroomGood2
+    21300046: KitchenGood0
+    21300048: BathroomGood1
     21300050: LivingRoomGood2
-    21300052: KitchenGood2
-    21300054: ResultText_16
+    21300052: KitchenGood1
+    21300054: LivingRoomGood1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -137,7 +137,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BathroomMed1
+    - name: BathroomMed0
       rect:
         serializedVersion: 2
         x: 44
@@ -167,7 +167,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BathroomMed2
+    - name: BathroomMed1
       rect:
         serializedVersion: 2
         x: 43
@@ -197,7 +197,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BathroomGood1
+    - name: BathroomGood0
       rect:
         serializedVersion: 2
         x: 45
@@ -217,7 +217,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: KitchenGood1
+    - name: KitchenGood0
       rect:
         serializedVersion: 2
         x: 1372
@@ -227,7 +227,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BathroomGood2
+    - name: BathroomGood1
       rect:
         serializedVersion: 2
         x: 43
@@ -237,7 +237,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ResultText_16
+    - name: LivingRoomGood1
       rect:
         serializedVersion: 2
         x: 709
@@ -247,7 +247,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: KitchenGood2
+    - name: KitchenGood1
       rect:
         serializedVersion: 2
         x: 1372
