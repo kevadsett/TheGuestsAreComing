@@ -9,7 +9,7 @@ public class ProgressTracker : MonoBehaviour {
 	public GameObject Thumbnails;
 	public Transform RoomTick;
 
-	private int roomCount = 3;
+	private int roomCount = 4;
 	private int completeRoomCount = 0;
 
 	private static bool created = false;
