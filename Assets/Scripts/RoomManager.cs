@@ -13,7 +13,7 @@ public class RoomManager : MonoBehaviour {
 	public static string CurrentRoomName;
 	public static float CurrentRoomAge;
 
-	static List<string> ExistingNames = new List<string>();
+	public static List<string> ExistingNames = new List<string>();
 
 	void Awake() {
 		
@@ -58,5 +58,16 @@ public class RoomManager : MonoBehaviour {
 		} else {
 			EventManager.RoomAction (Name, EventManager.RoomEventType.itemTidied, numberOfTidiedItems, Items.Count);
 		}
+	}
+
+	public static void RemoveCurrentRoom() {
+		CurrentRoom = null;
+		CurrentRoomName = null;
+		CurrentRoomAge = 0.0f;
+	}
+
+	public static void Reset() {
+		RemoveCurrentRoom ();
+		ExistingNames.Clear ();
 	}
 }

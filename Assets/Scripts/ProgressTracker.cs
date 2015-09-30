@@ -77,4 +77,15 @@ public class ProgressTracker : MonoBehaviour {
 	void OnTimeUp() {
 		Application.LoadLevel ("Results");
 	}
+
+	public void Reset() {
+		completeRoomCount = 0;
+		roomProgress.Clear ();
+	}
+
+	void OnLevelWasLoaded(int index) {
+		if (index == 1) { // main scene
+			Thumbnails = GameObject.Find ("Thumbnails");
+		}
+	}
 }
