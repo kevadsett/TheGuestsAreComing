@@ -1,9 +1,21 @@
 fileFormatVersion: 2
 guid: 13b96d049515440649c34ca31a0125a4
-timeCreated: 1443551981
+timeCreated: 1443644393
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Background
+    21300002: HoopToy_1
+    21300004: Hoops
+    21300006: HoopToy_0
+    21300008: Slinky_0
+    21300010: Slinky_1
+    21300012: Furby_1
+    21300014: Doll_0
+    21300016: Doll_1
+    21300018: Furby_0
+    21300020: Dinosaur_0
+    21300022: Dinosaur_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -48,7 +60,127 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Background
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 960
+        height: 640
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HoopToy_1
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 1080
+        width: 70
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Hoops
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1080
+        width: 120
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HoopToy_0
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 1080
+        width: 70
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Slinky_0
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 810
+        width: 70
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Slinky_1
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 819
+        width: 59
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Furby_1
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 438
+        width: 60
+        height: 50
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doll_0
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 446
+        width: 110
+        height: 50
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Doll_1
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 447
+        width: 50
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Furby_0
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 338
+        width: 60
+        height: 50
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dinosaur_0
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 336
+        width: 60
+        height: 90
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dinosaur_1
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 336
+        width: 80
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
