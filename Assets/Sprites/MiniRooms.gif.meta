@@ -1,13 +1,24 @@
 fileFormatVersion: 2
 guid: d4bed170bf24c4cefa1d87ace0074acc
-timeCreated: 1443645428
+timeCreated: 1443646248
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Bathroom
+    21300002: Bedroom
+    21300004: Playroom
+    21300006: LivingRoom
+    21300008: Kitchen
+    21300010: Bathroom
+    21300012: MiniRooms_1
+    21300014: Bedroom
+    21300016: Playroom
+    21300018: LivingRoom
+    21300020: Kitchen
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -26,18 +37,18 @@ TextureImporter:
   cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +59,67 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Bathroom
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 250
+        width: 210
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiniRooms_1
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 250
+        width: 210
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bedroom
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 250
+        width: 210
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Playroom
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 90
+        width: 210
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LivingRoom
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 90
+        width: 210
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kitchen
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 90
+        width: 210
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
