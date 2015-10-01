@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: cfe28a8cb355c4c04b9f7a1e004c711b
-timeCreated: 1443643920
+timeCreated: 1443681552
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -32,6 +32,24 @@ TextureImporter:
     21300050: LivingRoomGood2
     21300052: KitchenGood1
     21300054: LivingRoomGood1
+    21300056: PlayRoomBad0
+    21300058: BedroomBad0
+    21300060: Bedroom2Bad0
+    21300062: PlayRoomBad1
+    21300064: BedroomBad1
+    21300066: Bedroom2Bad1
+    21300068: PlayRoomMed0
+    21300070: BedroomMed0
+    21300072: Bedroom2Med0
+    21300074: PlayRoomMed1
+    21300076: BedroomMed1
+    21300078: Bedroom2Med1
+    21300080: PlayRoomGood0
+    21300082: BedroomGood0
+    21300084: Bedroom2Good0
+    21300086: PlayRoomGood1
+    21300088: BedroomGood1
+    21300090: Bedroom2Good1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -54,8 +72,8 @@ TextureImporter:
   cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -3
-  maxTextureSize: 2048
+  textureFormat: -2
+  maxTextureSize: 4096
   textureSettings:
     filterMode: 0
     aniso: 16
@@ -80,8 +98,8 @@ TextureImporter:
     - name: BathroomBad0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 1845
+        x: 5
+        y: 2450
         width: 640
         height: 100
       alignment: 0
@@ -90,8 +108,8 @@ TextureImporter:
     - name: LivingRoomBad0
       rect:
         serializedVersion: 2
-        x: 710
-        y: 1843
+        x: 671
+        y: 2448
         width: 640
         height: 100
       alignment: 0
@@ -100,8 +118,8 @@ TextureImporter:
     - name: KitchenBad0
       rect:
         serializedVersion: 2
-        x: 1371
-        y: 1840
+        x: 1332
+        y: 2445
         width: 640
         height: 100
       alignment: 0
@@ -110,8 +128,8 @@ TextureImporter:
     - name: BathroomBad1
       rect:
         serializedVersion: 2
-        x: 43
-        y: 1727
+        x: 4
+        y: 2332
         width: 640
         height: 100
       alignment: 0
@@ -120,8 +138,8 @@ TextureImporter:
     - name: LivingRoomBad1
       rect:
         serializedVersion: 2
-        x: 710
-        y: 1725
+        x: 671
+        y: 2330
         width: 640
         height: 100
       alignment: 0
@@ -130,8 +148,8 @@ TextureImporter:
     - name: KitchenBad1
       rect:
         serializedVersion: 2
-        x: 1372
-        y: 1724
+        x: 1333
+        y: 2329
         width: 640
         height: 100
       alignment: 0
@@ -140,8 +158,8 @@ TextureImporter:
     - name: BathroomMed0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 1437
+        x: 5
+        y: 2210
         width: 640
         height: 100
       alignment: 0
@@ -150,8 +168,8 @@ TextureImporter:
     - name: LivingRoomMed0
       rect:
         serializedVersion: 2
-        x: 708
-        y: 1437
+        x: 669
+        y: 2210
         width: 640
         height: 100
       alignment: 0
@@ -160,8 +178,8 @@ TextureImporter:
     - name: KitchenMed0
       rect:
         serializedVersion: 2
-        x: 1372
-        y: 1438
+        x: 1333
+        y: 2211
         width: 640
         height: 100
       alignment: 0
@@ -170,8 +188,8 @@ TextureImporter:
     - name: BathroomMed1
       rect:
         serializedVersion: 2
-        x: 43
-        y: 1313
+        x: 4
+        y: 2086
         width: 640
         height: 100
       alignment: 0
@@ -180,8 +198,8 @@ TextureImporter:
     - name: LivingRoomMed1
       rect:
         serializedVersion: 2
-        x: 708
-        y: 1314
+        x: 669
+        y: 2087
         width: 640
         height: 100
       alignment: 0
@@ -190,8 +208,8 @@ TextureImporter:
     - name: KitchenMed1
       rect:
         serializedVersion: 2
-        x: 1372
-        y: 1315
+        x: 1333
+        y: 2088
         width: 640
         height: 100
       alignment: 0
@@ -200,8 +218,8 @@ TextureImporter:
     - name: BathroomGood0
       rect:
         serializedVersion: 2
-        x: 45
-        y: 1027
+        x: 6
+        y: 1972
         width: 640
         height: 100
       alignment: 0
@@ -210,8 +228,8 @@ TextureImporter:
     - name: LivingRoomGood0
       rect:
         serializedVersion: 2
-        x: 709
-        y: 1025
+        x: 670
+        y: 1970
         width: 640
         height: 100
       alignment: 0
@@ -220,8 +238,8 @@ TextureImporter:
     - name: KitchenGood0
       rect:
         serializedVersion: 2
-        x: 1372
-        y: 1024
+        x: 1333
+        y: 1969
         width: 640
         height: 100
       alignment: 0
@@ -230,8 +248,8 @@ TextureImporter:
     - name: BathroomGood1
       rect:
         serializedVersion: 2
-        x: 43
-        y: 911
+        x: 4
+        y: 1856
         width: 640
         height: 100
       alignment: 0
@@ -240,8 +258,8 @@ TextureImporter:
     - name: LivingRoomGood1
       rect:
         serializedVersion: 2
-        x: 709
-        y: 912
+        x: 670
+        y: 1857
         width: 640
         height: 100
       alignment: 0
@@ -250,8 +268,188 @@ TextureImporter:
     - name: KitchenGood1
       rect:
         serializedVersion: 2
-        x: 1372
-        y: 912
+        x: 1333
+        y: 1857
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayRoomBad0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1731
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BedroomBad0
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1729
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bedroom2Bad0
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1726
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayRoomBad1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1613
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BedroomBad1
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1611
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bedroom2Bad1
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 1610
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayRoomMed0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1478
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BedroomMed0
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1478
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bedroom2Med0
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 1479
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayRoomMed1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1354
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BedroomMed1
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1355
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bedroom2Med1
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 1356
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayRoomGood0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1240
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BedroomGood0
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1238
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bedroom2Good0
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 1237
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayRoomGood1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1124
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BedroomGood1
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1125
+        width: 640
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bedroom2Good1
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 1125
         width: 640
         height: 100
       alignment: 0

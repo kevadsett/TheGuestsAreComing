@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d4bed170bf24c4cefa1d87ace0074acc
-timeCreated: 1443646248
+timeCreated: 1443680678
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,7 +10,7 @@ TextureImporter:
     21300006: LivingRoom
     21300008: Kitchen
     21300010: Bathroom
-    21300012: MiniRooms_1
+    21300012: Bedroom2
     21300014: Bedroom
     21300016: Playroom
     21300018: LivingRoom
@@ -70,7 +70,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: MiniRooms_1
+    - name: Bedroom2
       rect:
         serializedVersion: 2
         x: 370
@@ -94,7 +94,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 120
-        y: 90
+        y: 79
         width: 210
         height: 140
       alignment: 0
@@ -104,7 +104,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 370
-        y: 90
+        y: 80
         width: 210
         height: 140
       alignment: 0
@@ -114,7 +114,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 620
-        y: 90
+        y: 80
         width: 210
         height: 140
       alignment: 0
