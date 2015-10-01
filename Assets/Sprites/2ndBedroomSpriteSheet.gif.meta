@@ -1,13 +1,21 @@
 fileFormatVersion: 2
 guid: 357cfd2cfe9044c3183228fe049f4115
-timeCreated: 1443680624
+timeCreated: 1443683178
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Background
+    21300002: Ladder
+    21300004: Bed_1
+    21300006: ToyBox_0
+    21300008: ToyBox_1
+    21300010: Bed_0
+    21300012: Curtains_0
+    21300014: Curtains_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -29,15 +37,15 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +56,87 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Background
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 960
+        height: 640
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ladder
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 530
+        width: 90
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bed_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 480
+        width: 440
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ToyBox_0
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 400
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ToyBox_1
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 400
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bed_0
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 231
+        width: 440
+        height: 169
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Curtains_0
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 50
+        width: 340
+        height: 270
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Curtains_1
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 50
+        width: 340
+        height: 270
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
